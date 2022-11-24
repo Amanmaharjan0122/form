@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import HomePage from './components/homepagecomponents/index'
+import Loginpage from './loginpage/index'
 
 function App() {
   const [showRedDiv, setShowRedDiv] = React.useState(true)
@@ -48,26 +49,27 @@ function App() {
   }
 
   return (
-    <div className="main">
-      <div className="left">
-        <button className="red" onClick={handleRedClick} />
-        <button className="blue" onClick={handleBlueClick} />
-        <button className="yellow" onClick={handleYellowClick} />
-        <button className="grey" onClick={handleGreyClick} />
-        <button className="darkblue" onClick={handleDarkblueClick} />
-      </div>
-      <div className="right">
-        {showRedDiv && <HomePage />}
+    <Loginpage />
+    //     <div className="main">
+    //       <div className="left">
+    //         <button className="red" onClick={handleRedClick} />
+    //         <button className="blue" onClick={handleBlueClick} />
+    //         <button className="yellow" onClick={handleYellowClick} />
+    //         <button className="grey" onClick={handleGreyClick} />
+    //         <button className="darkblue" onClick={handleDarkblueClick} />
+    //       </div>
+    //       <div className="right">
+    //         {showRedDiv && <HomePage />}
 
-        {showBlueDiv && <div className="container2">about</div>}
+    //         {showBlueDiv && <div className="container2">about</div>}
 
-        {showYellowDiv && <div className="container3">resume</div>}
+    //         {showYellowDiv && <div className="container3">resume</div>}
 
-        {showGreyDiv && <div className="container4">work</div>}
+    //         {showGreyDiv && <div className="container4">work</div>}
 
-        {showDarkblueDiv && <div className="container5">contact</div>}
-      </div>
-    </div>
+    //         {showDarkblueDiv && <div className="container5">contact</div>}
+    //       </div>
+    //     </div>
   )
 }
 
